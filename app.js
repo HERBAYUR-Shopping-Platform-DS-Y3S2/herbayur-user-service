@@ -87,3 +87,5 @@ app.use(express.static(path.join(__dirname, '/client/build')))
 //       res.end();
 //    }
 // });
+
+module.exports = app;

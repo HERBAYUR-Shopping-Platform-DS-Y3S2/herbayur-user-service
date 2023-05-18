@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: herbayur-user-service
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 5008
+      targetPort: 5008
+  selector:
+    app: herbayur-user-service-app
+
+# //service.yaml file
+# -----------------------------
+# services:
+
+#   inventory:
+#     git_url: https://github.com/HERBAYUR-Shopping-Platform-DS-Y3S2/herbayur-user-service/tree/develop
+#     git_branch: develop
+#     command: npm start
+#     build_root: .
+#     ports:
+#       - container: 5008
+#         http: 50
+#         https: 443
+#     env_vars:
+#       NODE_ENV: production
+
+# databases:  
+#   - mongodb
